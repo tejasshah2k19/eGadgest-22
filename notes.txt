@@ -1,0 +1,18 @@
+npm --> to download any package // lib
+
+install 
+uninstall
+update 
+upgrade
+
+express lib--> 
+
+npm install express 
+npm i express
+
+
+
+
+localhost:3000/login
+
+
