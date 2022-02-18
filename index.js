@@ -1,5 +1,5 @@
 const express = require("express")
-
+const mongoose = require('mongoose');
 
 const app = express() //server 
 
@@ -38,7 +38,20 @@ app.post("/subtraction",function(req,res){
  })
  
 
+//database 
+mongoose.connect('mongodb://localhost:27017/egadgets',function(err){
+    if(err){
+        console.log("db not connected");
+        console.log(err);
+    }else{
+        console.log("db connected");
+    }
+});
 
+
+
+
+//server 
 app.listen(3000,function(){
     console.log("server started....on....3000");
 });//9000+   

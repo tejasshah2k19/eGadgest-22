@@ -15,4 +15,13 @@ npm i express
 
 localhost:3000/login
 
+compass -> gui --> 
+database --> mongodb --> noSQL 
+
+--> node   ===> mongoose
+
+
+
+npm install mongoose 
+
 
