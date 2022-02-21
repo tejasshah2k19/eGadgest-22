@@ -25,3 +25,19 @@ database --> mongodb --> noSQL
 npm install mongoose 
 
 
+-------------------------
+index.js 
+
+
+MVC --> model view controller 
+
+
+REST api --> protocol --> rules / convention 
+
+1) output response --> json   // normal 
+
+
+1) signup [post]
+2) login  [post]
+3) forgetpassword [post]
+
