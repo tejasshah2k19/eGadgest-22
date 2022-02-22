@@ -1,7 +1,5 @@
-const userController = require("./controller/users-controller")
-
 const express = require("express")
-
+const roleController = require("./controller/role-controller")
 
 
 const app = express()
@@ -11,14 +9,13 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
 
-//urls - apis 
-app.get("/",function(req,res){
-    res.write("welcome")
-    res.end()
-})
+ //urls 
 
-app.post("/signup",userController.signup)
-
+//roles 
+app.post("/roles",roleController.addRole)
+app.get("/roles",roleController.getAllRoles)
+ 
+ 
 
 
 //server 

@@ -41,3 +41,49 @@ REST api --> protocol --> rules / convention
 2) login  [post]
 3) forgetpassword [post]
 
+-----------------------
+node --> 
+
+
+acces
+
+
+website [ url-encoded ] 
+	url
+
+mobile app'
+	api 
+	android [json]
+	iphone 	[json] 
+
+
+SOAP API  xml
+  
+
+REST API [ logic ] 
+	[ url ]  
+	logic 
+
+1) response - json 
+	{	
+ 		key:value
+	}
+	{
+		firstName : ram,
+		email 	: ram@gmail.com,
+	} 
+	
+
+2) product 						    HTTP method 
+		add product		/products 			POST	{body}
+		list product 		/products		GET 	
+		view product 		/products/:productId	GET  {query} ? 
+		delete product 		/products/:productId	DELETE {query} ? 
+		update product 		/products		PUT		{body}
+				
+
+
+user
+
+
+---------------------------------------
