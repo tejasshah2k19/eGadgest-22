@@ -1,4 +1,4 @@
-
+const RoleModel = require("../model/role-model")
 
 // function addRole(req,res){
 
@@ -8,26 +8,40 @@
 // module.exports.addRole = addRole 
 
 //  /roles   POST 
-module.exports.addRole = function(req,res){
- 
-        let paramRoleName = req.body.roleName 
-        console.log(paramRoleName);
+module.exports.addRole = function (req, res) {
 
-       //validate 
-       
-       //db save 
+    let paramRoleName = req.body.roleName
+    console.log(paramRoleName);
+
+    //validate 
+
+    //db save 
+    let roleModel = new RoleModel({
+        roleName: paramRoleName
+    })
+
+    roleModel.save(function (err, success) {
+        if (err) {
+            res.json({ status: -1, msg: "Something Went Wrong", data: err })
+        } else {
+            res.json({ status: 200, msg: "role save", data: success })
+        }
+    })
 
 
-       res.json({status:200,msg:"role save",data:paramRoleName})
-
-    //    res.json({status:-1,msg:"duplicate role name",data:paramRoleName})
 }
 
 
 //list all roles 
-module.exports.getAllRoles = function(req,res){
+module.exports.getAllRoles = function (req, res) {
 
-    //db all read 
-    res.json({msg:"all roles ret...",status:200,data:{"roles":"roles"}})
-    
+   RoleModel.find(function(err,data){
+    if (err) {
+        res.json({ status: -1, msg: "Something Went Wrong", data: err })
+    } else {
+        res.json({ status: 200, msg: "role ret...", data: data })
+    }
+   })
+
+
 }

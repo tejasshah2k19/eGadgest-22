@@ -87,3 +87,17 @@ user
 
 
 ---------------------------------------
+
+db -- mongoose -- node 
+
+1 - db connection
+2 - save delete read modify 
+
+
+npm install mongoose
+
+
+connect 
+
+table --> schema  --> model 
+
