@@ -101,3 +101,20 @@ connect
 
 table --> schema  --> model 
 
+1 schema ==> columns --> tables --> data type 
+2 model ==> save() delete() update() 
+
+
+
+category 
+		categoryId
+		categoryName 
+
+		1) model :  category-model 
+		2) controller : category-controller - api 
+		3) index.js : url - mapping 
+
+
+delete api --> 
+
+DELETE    /categories/:categoryId  

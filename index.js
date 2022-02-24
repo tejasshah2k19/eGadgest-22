@@ -1,5 +1,6 @@
 const express = require("express")
 const roleController = require("./controller/role-controller")
+const categoryController = require("./controller/category-controller")
 const mongoose = require("mongoose")
 
 const app = express()
@@ -15,8 +16,11 @@ app.use(express.urlencoded({extended:true}))
 app.post("/roles",roleController.addRole)
 app.get("/roles",roleController.getAllRoles)
  
- 
 
+//category 
+app.post("/categories",categoryController.addCategory)
+app.get("/categories",categoryController.getAllCategories)
+app.delete("/categories",categoryController.deleteCategory)
 
 //database 
 mongoose.connect('mongodb://localhost:27017/egadgets',function(err){
