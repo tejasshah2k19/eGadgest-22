@@ -118,3 +118,9 @@ category
 delete api --> 
 
 DELETE    /categories/:categoryId  
+
+
+nodemon 
+
+npm install nodemon -g 
+
