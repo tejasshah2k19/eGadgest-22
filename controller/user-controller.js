@@ -32,7 +32,37 @@ module.exports.addUser = function(req,res){
 
 }
 
+
 //list 
+module.exports.getAllUser = function(req,res){
+    
+    UserModel.find(function(err,success){
+        
+        if(err){
+            res.json({status:-1,msg:"SMW",data:err})
+        }else{
+            res.json({status:200,msg:"user reterived..",data:success})
+        }
+    })
+
+}
 
 //delete 
 
+//update 
+
+module.exports.updateUser = function(req,res){
+    let firstNameParam = req.body.firstName
+    let lastNameParam = req.body.lastName
+    let userIdParam = req.body.userId 
+
+    UserModel.updateOne({_id:userIdParam},{firstName:firstNameParam,lastName:lastNameParam},function(err,success){
+        
+        if(err){
+            res.json({status:-1,msg:"SMW",data:err})
+        }else{
+            res.json({status:200,msg:"user modified",data:success})
+        }
+    })
+
+}

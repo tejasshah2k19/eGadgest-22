@@ -12,6 +12,10 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
 
+
+//
+
+
  //urls 
 
 //roles 
@@ -28,7 +32,8 @@ app.delete("/categories",categoryController.deleteCategory)
 
 //users 
 app.post("/users",userController.addUser)
-
+app.put("/users",userController.updateUser)
+app.get("/users",userController.getAllUser)
 
 //database 
 mongoose.connect('mongodb://localhost:27017/egadgets',function(err){
